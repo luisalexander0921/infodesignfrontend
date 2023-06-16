@@ -1,0 +1,50 @@
+<div class="title">
+    <h1>Top 20 Peores Tramos/Cliente</h1>
+  </div>
+  
+  
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <button mat-raised-button [disabled]="!formWorstStages" class="btn btn-primary btn-sm" (click)="getHistorical()">
+          <mat-icon>add</mat-icon> Consultar
+        </button>
+      </div>
+    </div>
+    <br>
+  
+    <mat-card-content>
+      <form [formGroup]="formWorstStages">
+        <div class="row">
+          <div class="col-6">
+            <mat-form-field>
+              <mat-label>Seleccione Fecha Inicial</mat-label>
+              <input matInput [matDatepicker]="pickerInicio" formControlName="dateStart">
+              <mat-datepicker-toggle matSuffix [for]="pickerInicio"></mat-datepicker-toggle>
+              <mat-datepicker #pickerInicio></mat-datepicker>
+            </mat-form-field>
+          </div>
+  
+          <div class="col-6">
+            <mat-form-field>
+              <mat-label>Seleccione Fecha Final</mat-label>
+              <input matInput [matDatepicker]="pickerFin" formControlName="datefinish">
+              <mat-datepicker-toggle matSuffix [for]="pickerFin"></mat-datepicker-toggle>
+              <mat-datepicker #pickerFin></mat-datepicker>
+            </mat-form-field>
+          </div>
+  
+        </div>
+  
+  
+      </form>
+  
+    </mat-card-content>
+  
+  
+  
+  
+    <!-- table -->
+  
+  
+  </div>
